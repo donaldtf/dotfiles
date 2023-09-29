@@ -13,7 +13,7 @@ function configure_screenshot_storage(){
 
 function configure_dock_settings(){
 	defaults write com.apple.dock "autohide" -bool "true"
-	defaults write com.apple.dock "orientation" -string "left"
+	# defaults write com.apple.dock "orientation" -string "left"
 	killall Dock
 }
 
@@ -40,9 +40,9 @@ ln -sf $DIR/oh-my-zsh.sh ~/.oh-my-zsh/oh-my-zsh.sh
 
 if [[ $OSTYPE == 'darwin'* ]]; then
   echo -ne "Updating MacOS UI config...\033[0K\r“"
-  configure_screenshot_storage
+#   configure_screenshot_storage
   configure_dock_settings
-  configure_finder
+#   configure_finder
   echo -e "Updating MacOS UI config... Done“"
 fi
 
